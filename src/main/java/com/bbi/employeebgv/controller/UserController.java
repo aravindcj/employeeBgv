@@ -3,6 +3,7 @@ package com.bbi.employeebgv.controller;
 import com.bbi.employeebgv.model.User;
 import com.bbi.employeebgv.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,17 +16,17 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/addUser")
-    public User createUser(@RequestBody User user){
-        return userService.createUser(user);
+    public ResponseEntity<User> createUser(@RequestBody User user){
+        return ResponseEntity.ok(userService.createUser(user));
     }
 
     @GetMapping("/getUser")
-    public List<User> fetchUser(){
-        return userService.fetchUser();
+    public ResponseEntity<List<User>> fetchUser(){
+        return ResponseEntity.ok(userService.fetchUser());
     }
 
     @PutMapping("/update/{userId}")
-    public User updateRole(@PathVariable Long userId, @RequestBody User user){
-        return userService.updateRole(userId, user);
+    public ResponseEntity<User> updateRole(@PathVariable Long userId, @RequestBody User user){
+        return ResponseEntity.ok(userService.updateRole(userId, user));
     }
 }

@@ -4,6 +4,7 @@ import com.bbi.employeebgv.model.UserDetails;
 import com.bbi.employeebgv.dto.UserDetailsRequest;
 import com.bbi.employeebgv.service.UserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,14 +17,14 @@ public class UserDetailsController {
     private UserDetailsService userDetailsService;
 
     @PostMapping("/addUserDetails")
-    public UserDetails createUserDetails(@RequestBody UserDetailsRequest userDetails){
+    public ResponseEntity<UserDetails> createUserDetails(@RequestBody UserDetailsRequest userDetails){
 
-        return userDetailsService.createUserDetails(userDetails);
+        return ResponseEntity.ok(userDetailsService.createUserDetails(userDetails));
     }
 
     @GetMapping
-    public List<UserDetails> getAllUserDetails(){
-        return userDetailsService.getAllUserDetails();
+    public ResponseEntity<List<UserDetails>> getAllUserDetails(){
+        return ResponseEntity.ok(userDetailsService.getAllUserDetails());
     }
 
 }
