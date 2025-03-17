@@ -1,4 +1,4 @@
-package com.bbi.employeeBgv;
+package com.bbi.employeebgv;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

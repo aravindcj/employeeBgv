@@ -1,6 +1,5 @@
-package com.bbi.employeeBgv.model;
+package com.bbi.employeebgv.model;
 
-import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

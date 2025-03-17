@@ -1,8 +1,8 @@
-package com.bbi.employeeBgv.service;
+package com.bbi.employeebgv.service;
 
 
-import com.bbi.employeeBgv.model.Skill;
-import com.bbi.employeeBgv.respository.SkillRepository;
+import com.bbi.employeebgv.model.Skill;
+import com.bbi.employeebgv.respository.SkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

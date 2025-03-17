@@ -1,6 +1,6 @@
-package com.bbi.employeeBgv.dto;
+package com.bbi.employeebgv.dto;
 
-import com.bbi.employeeBgv.model.UserDetails;
+import com.bbi.employeebgv.model.UserDetails;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

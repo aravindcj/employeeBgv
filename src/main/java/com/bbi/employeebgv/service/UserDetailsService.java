@@ -1,17 +1,16 @@
-package com.bbi.employeeBgv.service;
+package com.bbi.employeebgv.service;
 
-import com.bbi.employeeBgv.model.Skill;
-import com.bbi.employeeBgv.model.User;
-import com.bbi.employeeBgv.model.UserDetails;
-import com.bbi.employeeBgv.dto.UserDetailsRequest;
-import com.bbi.employeeBgv.respository.SkillRepository;
-import com.bbi.employeeBgv.respository.UserDetailsRepository;
-import com.bbi.employeeBgv.respository.UserRepository;
+import com.bbi.employeebgv.model.Skill;
+import com.bbi.employeebgv.model.User;
+import com.bbi.employeebgv.model.UserDetails;
+import com.bbi.employeebgv.dto.UserDetailsRequest;
+import com.bbi.employeebgv.respository.SkillRepository;
+import com.bbi.employeebgv.respository.UserDetailsRepository;
+import com.bbi.employeebgv.respository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

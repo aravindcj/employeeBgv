@@ -1,7 +1,7 @@
-package com.bbi.employeeBgv.controller;
+package com.bbi.employeebgv.controller;
 
-import com.bbi.employeeBgv.model.User;
-import com.bbi.employeeBgv.service.UserService;
+import com.bbi.employeebgv.model.User;
+import com.bbi.employeebgv.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

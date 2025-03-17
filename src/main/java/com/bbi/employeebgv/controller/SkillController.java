@@ -1,8 +1,8 @@
-package com.bbi.employeeBgv.controller;
+package com.bbi.employeebgv.controller;
 
 
-import com.bbi.employeeBgv.model.Skill;
-import com.bbi.employeeBgv.service.SkillService;
+import com.bbi.employeebgv.model.Skill;
+import com.bbi.employeebgv.service.SkillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,6 +1,6 @@
-package com.bbi.employeeBgv.respository;
+package com.bbi.employeebgv.respository;
 
-import com.bbi.employeeBgv.model.UserDetails;
+import com.bbi.employeebgv.model.UserDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,11 +1,7 @@
-package com.bbi.employeeBgv.model;
+package com.bbi.employeebgv.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.Objects;
 
 @Entity
 @NoArgsConstructor

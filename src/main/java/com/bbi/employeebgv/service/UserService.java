@@ -1,7 +1,7 @@
-package com.bbi.employeeBgv.service;
+package com.bbi.employeebgv.service;
 
-import com.bbi.employeeBgv.model.User;
-import com.bbi.employeeBgv.respository.UserRepository;
+import com.bbi.employeebgv.model.User;
+import com.bbi.employeebgv.respository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
