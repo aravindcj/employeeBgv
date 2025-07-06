@@ -1,4 +1,4 @@
-package com.bbi.employeeBgv;
+package com.bbi.employeebgv;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
