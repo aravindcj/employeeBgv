@@ -2,7 +2,6 @@ package com.bbi.employeebgv.controller;
 
 import com.bbi.employeebgv.config.JwtUtil;
 import com.bbi.employeebgv.model.User;
-import com.bbi.employeebgv.respository.UserRepository;
 import com.bbi.employeebgv.service.UserDetailsServiceImpl;
 import com.bbi.employeebgv.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,9 +22,11 @@ public class UserController {
     private final JwtUtil jwtUtil;
     private final UserDetailsServiceImpl userDetailsService;
 
-    public UserController(AuthenticationManager authenticationManager, JwtUtil jwtUtil,
-                          UserDetailsServiceImpl userDetailsService, UserRepository userRepository,
-                          BCryptPasswordEncoder passwordEncoder) {
+    public UserController(
+            AuthenticationManager authenticationManager,
+                          JwtUtil jwtUtil,
+                          UserDetailsServiceImpl userDetailsService
+    ) {
         this.authenticationManager = authenticationManager;
         this.jwtUtil = jwtUtil;
         this.userDetailsService = userDetailsService;

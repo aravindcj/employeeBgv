@@ -43,8 +43,8 @@ public class UserDetails {
     )
     private Set<Skill> skills = new HashSet<>();
 
-    @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", nullable = false, unique = true)
     private User user;
 
 }
