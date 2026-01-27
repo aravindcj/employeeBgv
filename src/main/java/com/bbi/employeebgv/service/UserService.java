@@ -23,7 +23,7 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @CachePut(value = "users", key = "#user.userId")
+    @CachePut(value = "users", key = "#result.user.userId")
     public User registerUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
@@ -34,7 +34,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    @CachePut(value = "users", key = "#user.userId")
+    @CachePut(value = "users", key = "#userId")
     public User updateRole(Long userId, User updatedUser) {
         Optional<User> userDetail = userRepository.findById(userId);
         if (userDetail.isPresent()) {
