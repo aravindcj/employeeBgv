@@ -61,10 +61,11 @@ public class UserDetailsService {
 
         Set<Skill> skillSet = new HashSet<>();
         for(String skillName : request.getSkills()){
-            Skill skill = skillRepository.findBySkillName(skillName)
+            String skillValue = skillName.trim().toLowerCase();
+            Skill skill = skillRepository.findBySkillName(skillValue)
                     .orElseGet(() -> {
                             Skill skills = new Skill();
-                            skills.setSkillName(skillName);
+                            skills.setSkillName(skillValue);
                             return skillRepository.save(skills);});
             skillSet.add(skill);
         }

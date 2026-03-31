@@ -18,7 +18,6 @@ public class UserDetailsController {
 
     @PostMapping("/addUserDetails")
     public ResponseEntity<UserDetails> createUserDetails(@RequestBody UserDetailsRequest userDetails){
-
         return ResponseEntity.ok(userDetailsService.createUserDetails(userDetails));
     }
 

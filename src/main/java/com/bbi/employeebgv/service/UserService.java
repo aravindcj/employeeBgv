@@ -2,6 +2,8 @@ package com.bbi.employeebgv.service;
 
 import com.bbi.employeebgv.model.User;
 import com.bbi.employeebgv.respository.UserRepository;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -21,15 +23,18 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public User createUser(User user) {
+    @CachePut(value = "users", key = "#result.user.userId")
+    public User registerUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
 
+    @Cacheable(value = "users")
     public List<User> fetchUser() {
         return userRepository.findAll();
     }
 
+    @CachePut(value = "users", key = "#userId")
     public User updateRole(Long userId, User updatedUser) {
         Optional<User> userDetail = userRepository.findById(userId);
         if (userDetail.isPresent()) {
