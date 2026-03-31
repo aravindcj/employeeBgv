@@ -56,7 +56,7 @@ public class JwtValidationFilter extends OncePerRequestFilter {
                         new UsernamePasswordAuthenticationToken(
                                 userDetails,
                                 null,
-                                userDetails.getAuthorities() // 🔥 ROLE COMES FROM HERE
+                                userDetails.getAuthorities() // ROLE COMES FROM HERE
                         );
 
                 authentication.setDetails(
